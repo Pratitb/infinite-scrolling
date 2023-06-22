@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #C5CAE9;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow-y: scroll;
+}
+
+.page-head {
+    margin: 10px 0 20px;
+}
+
+.filter-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0 20px;
+}
+
+.filter {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.filter:focus-visible {
+    outline: none;
+}
+
+.clear-inp {
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 12px;
+    transition: 0.3s;
+    left: -40px;
+    padding: 3px 7px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.75);
+}
+.clear-inp:hover{
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #FFFFFF;
+}
+
+.post {
+    position: relative;
+    background-color: #7986CB;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.post-content {
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.post-title {
+    font-size: 22px;
+    margin: 0 0 10px;
+}
+
+.post-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px 0;
+    margin: 20px 0 20px;
+}
+
+.number {
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: -8px;
+    left: -8px;
+}
+
+.loader {
+    display: flex;
+    justify-content: center;
+    transition: 0.3s;
+    gap: 0 5px;
+    margin: 50px 0;
+    opacity: 0;
+}
+
+.loader.show {
+    opacity: 1;
+}
+
+.circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    animation: bounce 0.5s infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.circle:nth-of-type(2) {
+    animation-delay: 0.1s;
+}
+
+.circle:nth-of-type(3) {
+    animation-delay: 0.2s;
+}
